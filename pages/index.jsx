@@ -4,7 +4,7 @@ import {getPost} from '../service';
 import { FeaturedPost} from '@/sections';
 
 
-export const revalidate = 60*5;
+// export const revalidate = 60*5;
 
 export default function Home({posts}) {
   return (
