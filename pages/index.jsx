@@ -35,7 +35,8 @@ export default function Home({posts}) {
 export async function getStaticProps() {
   const posts = (await getPost()) || [];
 return{
-  props:{posts}
+  props:{posts},
+  revalidate = 60*5;
 }
 
 }
