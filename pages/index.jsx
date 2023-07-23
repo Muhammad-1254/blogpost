@@ -4,7 +4,7 @@ import {getPost} from '../service';
 import { FeaturedPost} from '@/sections';
 
 
-// export const revalidate = 60*5;
+export const revalidate = 60*5;
 
 export default function Home({posts}) {
   return (
@@ -35,8 +35,7 @@ export default function Home({posts}) {
 export async function getStaticProps() {
   const posts = (await getPost()) || [];
 return{
-  props:{posts},
-  revalidate = 60
+  props:{posts}
 }
 
 }
